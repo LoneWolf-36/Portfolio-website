@@ -130,6 +130,9 @@ header {
     padding: 0;
 }
 
+.nav__item {
+    font-size: 5;
+}
 .nav__link {
     color: inherit;
     font-weight: var(--fw-bold);
@@ -168,7 +171,7 @@ header {
 }
 
 .nav-open .hamburger::after {
-
+    opacity: 0;
 }
 
 .hamburger {
@@ -204,6 +207,9 @@ header {
 
 .intro {
     position: relative;
+    width: auto;
+    height: auto;
+    padding-top: 0;
 }
 
 .intro__img {
@@ -252,6 +258,7 @@ header {
 }
 /* Services section */
 .my-services {
+    display: block;
     background-color: var(--clr-dark);
     background-image: url("./imgs/computer-2.jpg");
     background-repeat: no-repeat;
@@ -259,21 +266,24 @@ header {
     /* background-position: center; */
     background-blend-mode: darken;
     color: var(--clr-light);
-    text-align: right;
-}
-
-.section__title--services {
-    color: var(--clr-accent);
-    position: relative;
     text-align: center;
 }
 
-.section__title--services::after {
+.section__title--services,
+.section__title--about {
+    color: var(--clr-accent);
+    position: relative;
+    text-align: center;
+    margin-top: -1em;
+}
+
+.section__title--services::after,
+.section__title--about::after {
     content: '';
     display: block;
     width: 25%;
     height: 1px;
-    margin: 0.5em auto 1em;
+    margin: 0.2em auto 0.5em;
     background: currentColor;
 }
 
@@ -289,13 +299,35 @@ header {
     }
 }
 
+/* about-me */
+
+.about-me {
+    margin-top: 2px;
+    height: 400px;
+    background-color: #111;
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section__subtitle--about {
+    color: var(--clr-light);
+    position: relative;
+    padding: 10px 3em 1em 3em;
+}
+.about-me__body {
+    padding: 0em auto 1em;
+    padding-bottom: 0;
+    color: var(--clr-light);
+}
+
 /* footer */
  
 .footer{
     background: #111;
     color: var(--clr-accent);
     text-align: center;
-    padding: 2.5em 0;
+    padding: 1em 0;
 }
 
 .footer-link {
@@ -311,6 +343,7 @@ header {
 .footer a {
     color: inherit;
     text-decoration: none;
+    display: grid;
 }
 
 .footer ul {
